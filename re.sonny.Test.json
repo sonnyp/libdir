@@ -1,0 +1,42 @@
+{
+  "id": "re.sonny.Test",
+  "runtime": "org.freedesktop.Sdk",
+  "runtime-version": "24.08beta",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "sh",
+  "separate-locales": false,
+  "finish-args": [],
+  "cleanup": [
+    "#/include",
+    "#/lib/pkgconfig",
+    "/man",
+    "/share/doc",
+    "/share/gtk-doc",
+    "/share/man",
+    "#/share/pkgconfig",
+    "/share/installed-tests",
+    "*.la",
+    "*.a"
+  ],
+  "modules": [
+    {
+      "name": "libportal",
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dtests=false",
+        "-Dbackend-gtk3=disabled",
+        "-Dbackend-gtk4=disabled",
+        "-Dbackend-qt5=disabled",
+        "-Ddocs=false",
+        "-Dvapi=false"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/flatpak/libportal/releases/download/0.7.1/libportal-0.7.1.tar.xz",
+          "sha256": "297b90b263fad22190a26b8c7e8ea938fe6b18fb936265e588927179920d3805"
+        }
+      ]
+    }
+  ]
+}
