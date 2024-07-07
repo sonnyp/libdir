@@ -4,20 +4,6 @@
   "runtime-version": "24.08beta",
   "sdk": "org.freedesktop.Sdk",
   "command": "sh",
-  "separate-locales": false,
-  "finish-args": [],
-  "cleanup": [
-    "#/include",
-    "#/lib/pkgconfig",
-    "/man",
-    "/share/doc",
-    "/share/gtk-doc",
-    "/share/man",
-    "#/share/pkgconfig",
-    "/share/installed-tests",
-    "*.la",
-    "*.a"
-  ],
   "modules": [
     {
       "name": "libportal",
